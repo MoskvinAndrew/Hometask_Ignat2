@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+  .inputContainer{
+   display: flex;
+  }
+
+
+.Wrapp {
+    display: flex;
+    position: relative;
+
+
+
+}.message {
+    background-color: #efedd7;
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    margin-left: 20px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+
+}
+
+
+.input{
+    margin-left: 30px;
+    display:flex;
+    height: 30px;
+}
+.addButton {
+    background-color: #dcc3dc;
+    border-radius: 10px;
+    border: 1px solid #5b94a8;
+    margin-left: 35px;
+    margin-top: 5px;
+    height: 20px;
+
+}
+.span{
+    font-weight: bold;
+}
+.counter{
+    border: 2px solid red;
+    margin-left: 30px;
+    height: 130px;
+    border-radius: 20px;
+    padding: 10px;
+    width: 150px;
+}
