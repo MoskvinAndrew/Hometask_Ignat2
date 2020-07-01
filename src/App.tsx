@@ -6,6 +6,8 @@ import InputNew from "./common/input/inputNew";
 import CheckBoxNew from "./common/checkBox/CheckBox";
 import ButtonNew from "./common/button/Button";
 
+
+
 export type AppTypes = {
     id: string,
     name: string,
@@ -13,7 +15,7 @@ export type AppTypes = {
 
 
 function App() {
-
+    let [error, setErr] = useState<string|null>(null);
     let [nNew, setnNew] = useState<string>("");
     let [newArr, setnewArr] = useState<Array<{ id: string, name: string }>>([]);
 
@@ -25,23 +27,36 @@ function App() {
 
 
     function onChangeHandler(e: ChangeEvent<HTMLInputElement>) {
-        setnNew(e.currentTarget.value)
+        setnNew(e.currentTarget.value);
+        setErr("sdf");
     }
 
-    console.log(nNew);
+    function functionForNewInput() {
+        alert('Функция сработала на энтер');
+    }
+
+
+
 
 
     function onClickHandler() {
+        setErr("sd")
         if (nNew !== '') {
             // alert('Privet' + ' ' + nNew);
             NewElemInNewArr(nNew);
             setnNew('');
+
         }
     }
 
 
+
+
+
     function onKeyPressHandler(e: KeyboardEvent<HTMLInputElement>) {
         if (e.charCode == 13) {
+
+            functionForNewInput();
             (nNew !== "" && NewElemInNewArr(nNew));
             nNew !== "" && alert('Privet' + ' ' + nNew);
             setnNew('');
@@ -49,15 +64,11 @@ function App() {
     }
 
 
-    function error() {
-        return true
-    }
 
-    function functionForNewInput(e: KeyboardEvent<HTMLInputElement>) {
-        if (e.charCode == 13) {
-            alert('Функция сработала на энтер')
-        }
-    }
+
+
+
+
 
 
     return (
@@ -65,19 +76,29 @@ function App() {
             <ThirdHometask
                 nNew={nNew}
                 newArr={newArr}
-                onChangeHandler={onChangeHandler}
                 onKeyPressHandler={onKeyPressHandler}
+                onChangeHandler={onChangeHandler}
                 onClickHandler={onClickHandler}
+                typeofButton={false}
+                setnNew={setnNew}
+                error={error}
+
+
 
             />
 
 
             <div className="wrapperForNew">
                 <InputNew
+
+                    onKeyPressHandler={onKeyPressHandler}
                     functionForNewInput={functionForNewInput}
-                    error={error}/>
+                    setnNew={setnNew}
+
+                   />
                 <ButtonNew
                     name={"Моя кнопка"}
+                    typeofButton={true}
                 />
                 <CheckBoxNew/>
             </div>
