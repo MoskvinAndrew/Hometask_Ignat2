@@ -5,6 +5,7 @@
     "deploy": "gh-pages -d build"},
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://MoskvinAndrew.github.io/Hometask_Ignat2",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -21,7 +22,7 @@
     "typescript": "^3.7.5",
     "uuid": "^8.2.0"
   },
-  "homepage": "http://MoskvinAndrew.github.io/Hometask_Ignat2(my-app)",
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -43,4 +44,5 @@
       "last 1 safari version"
     ]
   }
+
 }
