@@ -32,7 +32,7 @@ function App() {
     }
 
     function functionForNewInput() {
-        alert('Функция сработала на энтер');
+        alert('Функция сработала на энтер!');
     }
 
 
