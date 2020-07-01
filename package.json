@@ -1,8 +1,5 @@
 {
   "name": "my-app",
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"},
   "version": "0.1.0",
   "private": true,
   "homepage": "http://MoskvinAndrew.github.io/Hometask_Ignat2",
@@ -24,6 +21,8 @@
   },
 
   "scripts": {
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
